@@ -97,8 +97,8 @@ export default {
     methods: {
         handleScroll(event) {
             if (
-                document.body.scrollTop > 80 ||
-                document.documentElement.scrollTop > 80
+                document.body.scrollTop > this.$refs.navbar.offsetHeight ||
+                document.documentElement.scrollTop > this.$refs.navbar.offsetHeight
             ) {
                 this.$refs.navbar.classList.remove("bg-transparent");
                 this.$refs.navbar.classList.add("bg-primary");
